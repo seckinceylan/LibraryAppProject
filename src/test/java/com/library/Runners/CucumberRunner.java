@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features",
         glue = "com/library/StepDefinitions",
-        dryRun = false,
+        dryRun = true,
         tags = "@login",
         publish = true
 
