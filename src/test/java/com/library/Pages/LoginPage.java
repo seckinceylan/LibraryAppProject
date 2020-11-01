@@ -7,8 +7,6 @@ import org.openqa.selenium.support.FindBy;
 
 public class LoginPage extends BasePage {
 
-    //To not use web elements directly in step definition classes
-    //helps to prevent code duplication and keep step definitions clean
     @FindBy(id= "inputEmail")
     private WebElement username;
 
@@ -23,18 +21,7 @@ public class LoginPage extends BasePage {
         password.sendKeys(passwordValue, Keys.ENTER);
     }
 
-    /*
-    public void login() {
-        String usernameValue = ConfigurationReader.getProperty("l");
-        String passwordValue = ConfigurationReader.getProperty("password");
-
-        username.sendKeys(usernameValue);
-        password.sendKeys(passwordValue, Keys.ENTER);
-    }
-
-     */
-
-    public void login(String role) {
+        public void login(String role) {
         String usernameValue = "";
         String passwordValue = "";
 

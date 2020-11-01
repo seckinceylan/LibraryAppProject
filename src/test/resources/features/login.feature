@@ -17,11 +17,12 @@ Feature: As user I want to be able to login under different roles
     When user logs in as a "student60"
     Then user should see dashboard page
 
-  @negative_login
+  @negative_login1
   Scenario: Invalid password
     When user logs in with "librarian57@library" username and "wrong" password
     Then user verifies that "Sorry, Wrong Email or Password" message is displayed
 
+  @negative_login2
   Scenario: Invalid username
     When user logs in with "wrong" username and "wrong" password
     Then user verifies that "Please enter a valid email address." message is displayed
