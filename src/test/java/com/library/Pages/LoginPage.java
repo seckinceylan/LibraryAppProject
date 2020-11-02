@@ -24,7 +24,6 @@ public class LoginPage extends BasePage {
         public void login(String role) {
         String usernameValue = "";
         String passwordValue = "";
-
         if (role.equalsIgnoreCase("librarian")) {
             usernameValue = ConfigurationReader.getProperty("librarian.username");
             passwordValue = ConfigurationReader.getProperty("librarian.password");
@@ -38,12 +37,13 @@ public class LoginPage extends BasePage {
         username.sendKeys(usernameValue);
         password.sendKeys(passwordValue, Keys.ENTER);
     }
+
     public String getWarningMessageText() {
         try {
             Thread.sleep(5000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        return warningMessage.getText().trim();
+        return warningMessage.getText();
     }
 }

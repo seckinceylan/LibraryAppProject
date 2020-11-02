@@ -12,15 +12,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.List;
 
 public abstract class BasePage {
-    //@FindBy(className = "oro-subtitle")
-    //protected WebElement pageSubTitle;
-
 
     public BasePage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
-
-
 
 
 }
